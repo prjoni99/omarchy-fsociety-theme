@@ -1,0 +1,5 @@
+background       = "#050607"
+background-alpha = 0.97
+text             = "#afb9bd"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 0.65

@@ -1,0 +1,28 @@
+# Neutral idle and hover; the signature red is spent only on keyboard focus
+# and the selected state, so it stays a signal rather than decoration.
+normal-color        = "#c3cbce"
+normal-fill-alpha   = 0.03
+normal-border       = "#7f8b8f"
+normal-border-width = 1
+normal-border-alpha = 0.30
+
+hover-cursor-color        = "#e2e9eb"
+hover-cursor-fill-alpha   = 0.07
+hover-cursor-border       = "#afb9bd"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.28
+
+focus-color        = "#e2e9eb"
+focus-fill-alpha   = 0.09
+focus-border       = "#c7423c"
+focus-border-width = 1
+focus-border-alpha = 0.70
+
+selected-color        = "#e2e9eb"
+selected-fill-alpha   = 0.15
+selected-border       = "#c7423c"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.20
+selection-fill-alpha = 0.32

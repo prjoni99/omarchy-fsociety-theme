@@ -1,0 +1,37 @@
+# Mr. Robot — fsociety
+# Cold blue-black grade, desaturated support colors, one signature red.
+
+mode = "dark"
+
+accent = "#d8463f"
+selection = "#2a1a1a"
+muted = "#3a4448"
+
+background = "#0c0f11"
+dark_background = "#080a0c"
+darker_background = "#050607"
+lighter_background = "#161a1d"
+
+foreground = "#c3cbce"
+dark_foreground = "#5c686c"
+light_foreground = "#afb9bd"
+bright_foreground = "#e2e9eb"
+
+hyprland_active_border = "rgba(c7423cee) rgba(8c2f2bee) 45deg"
+hyprland_inactive_border = "rgba(1c252a99)"
+
+red = "#c7423c"
+yellow = "#c9a15a"
+orange = "#c97c4a"
+green = "#5a8f6e"
+cyan = "#4c8c93"
+blue = "#4a6e8c"
+magenta = "#8c6076"
+brown = "#6e4a3c"
+
+bright_red = "#ec5f55"
+bright_yellow = "#e4c07b"
+bright_green = "#7dbe95"
+bright_cyan = "#74bfc5"
+bright_blue = "#6e9bbd"
+bright_magenta = "#b4879c"

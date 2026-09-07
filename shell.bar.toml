@@ -1,0 +1,8 @@
+# Bar sits below the window background so it recedes into the wallpaper.
+background       = "#070a0c"
+background-alpha = 0.88
+text             = "#afb9bd"
+active           = "#d8463f"
+scale-with-font  = true
+size-horizontal  = 28
+size-vertical    = 30
