@@ -66,4 +66,21 @@ anim workspaces style 'slidefade 8%'
 anim borderangle style once
 anim borderangle bezier hudSweep
 
+# --- Shell (Task 3) ---
+shell hyprland active-border '"rgba(d8463fff) rgba(d8463f00) rgba(d8463f00) rgba(d8463fff) 45deg"'
+shell bar background '"#050607"'
+shell bar background-alpha 0.80
+shell bar size-horizontal 26
+shell bar size-vertical 28
+shell notifications border-width '"1 1 1 3"'
+shell popups border-width 1
+shell tooltip border-width 1
+shell controls selected-border-width '"0 0 0 2"'
+shell controls selected-fill-alpha 0.10
+shell menu scrim-alpha 0.70
+shell launcher scrim-alpha 0.70
+shell polkit scrim-alpha 0.70
+shell image-picker scrim-alpha 0.70
+shell spacing scale 0.95
+
 exit $fail

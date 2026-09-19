@@ -19,9 +19,10 @@ focus-border-width = 1
 focus-border-alpha = 0.70
 
 selected-color        = "#e2e9eb"
-selected-fill-alpha   = 0.15
+selected-fill-alpha   = 0.10
 selected-border       = "#c7423c"
-selected-border-width = 0
+# A left rail instead of a box: a HUD selection marker.
+selected-border-width = "0 0 0 2"
 selected-border-alpha = 1.0
 
 pressed-fill-alpha   = 0.20

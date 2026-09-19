@@ -3,3 +3,4 @@ background-alpha = 0.96
 text             = "#c3cbce"
 border           = "hyprland.active-border"
 border-alpha     = 1.0
+border-width     = 1

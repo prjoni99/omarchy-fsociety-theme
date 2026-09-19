@@ -1,5 +1,5 @@
 scrim                   = "#040507"
-scrim-alpha             = 0.66
+scrim-alpha             = 0.70
 text                    = "#c3cbce"
 selected-border         = "#d8463f"
 selected-border-alpha   = 1.0

@@ -17,7 +17,8 @@ dark_foreground = "#5c686c"
 light_foreground = "#afb9bd"
 bright_foreground = "#e2e9eb"
 
-hyprland_active_border = "rgba(c7423cee) rgba(8c2f2bee) 45deg"
+# Feeds the shell's card borders only: hyprland.lua sets the window border.
+hyprland_active_border = "rgba(d8463fff) rgba(d8463f00) rgba(d8463f00) rgba(d8463fff) 45deg"
 hyprland_inactive_border = "rgba(1c252a99)"
 
 red = "#c7423c"

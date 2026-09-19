@@ -1,8 +1,9 @@
-# Bar sits below the window background so it recedes into the wallpaper.
-background       = "#070a0c"
-background-alpha = 0.88
+# Near-black over the dark glass; the red stays reserved for modules that
+# are calling for attention (recording, alerts).
+background       = "#050607"
+background-alpha = 0.80
 text             = "#afb9bd"
 active           = "#d8463f"
 scale-with-font  = true
-size-horizontal  = 28
-size-vertical    = 30
+size-horizontal  = 26
+size-vertical    = 28

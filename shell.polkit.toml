@@ -6,5 +6,5 @@ border           = "hyprland.active-border"
 border-error     = "#d8463f"
 border-alpha     = 1.0
 scrim            = "#040507"
-scrim-alpha      = 0.60
+scrim-alpha      = 0.70
 accent           = "#d8463f"
