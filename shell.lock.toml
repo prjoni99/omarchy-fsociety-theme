@@ -1,10 +1,14 @@
-background       = "#0a0d0f"
-background-alpha = 0.72
+# Lock screen. The shell exposes no scrim, caret or label tokens here, so the
+# card itself is near-opaque and the bracket frame comes from the shared
+# hyprland.active-border gradient. Typing lights the frame solid: that is
+# keyboard focus. Wrong password lights it red for the error.
+background       = "#050607"
+background-alpha = 0.88
 text             = "#d5dcdf"
 placeholder      = "#5c686c"
 text-error       = "#d8463f"
 border           = "hyprland.active-border"
-border-active    = "hyprland.active-border"
+border-active    = "rgba(d8463fff) rgba(8c2f2bff) 45deg"
 border-error     = "#d8463f"
 border-alpha     = 1.0
 selection        = "#c7423c"
