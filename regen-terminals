@@ -23,11 +23,21 @@ value() { awk -F'\t' -v k="$1" '$1 == k { print $2 }' <<<"$colors"; }
 accent=$(value accent)
 background=$(value background)
 
-sed "s|^cursor-color = .*|cursor-color = $accent\ncursor-text = $background|" \
-  "$out/ghostty.conf" >"$theme_dir/ghostty.conf"
-sed "s|^cursor = \".*\"|cursor = \"$accent\"|" \
-  "$out/alacritty.toml" >"$theme_dir/alacritty.toml"
-sed "s|^cursor #.*|cursor $accent|" \
-  "$out/kitty.conf" >"$theme_dir/kitty.conf"
-sed "s|^cursor=.*|cursor=${background#\#} ${accent#\#}|" \
-  "$out/foot.ini" >"$theme_dir/foot.ini"
+# The renderer exits 0 even when it finds no templates (a wrong OMARCHY_PATH),
+# so check its output before touching anything in the theme.
+files=(ghostty.conf alacritty.toml kitty.conf foot.ini)
+for f in "${files[@]}"; do
+  [[ -s $out/$f ]] || { echo "regen-terminals: Omarchy rendered no $f (check OMARCHY_PATH)" >&2; exit 1; }
+done
+[[ $accent == \#* && $background == \#* ]] || { echo "regen-terminals: no accent/background in colors.toml" >&2; exit 1; }
+
+# Edit in the scratch dir, then move all four into place at the end, so a
+# failure never leaves the theme with a truncated file.
+sed -i "s|^cursor-color = .*|cursor-color = $accent\ncursor-text = $background|" "$out/ghostty.conf"
+sed -i "s|^cursor = \".*\"|cursor = \"$accent\"|" "$out/alacritty.toml"
+sed -i "s|^cursor #.*|cursor $accent|" "$out/kitty.conf"
+sed -i "s|^cursor=.*|cursor=${background#\#} ${accent#\#}|" "$out/foot.ini"
+
+for f in "${files[@]}"; do
+  cp "$out/$f" "$theme_dir/$f"
+done
