@@ -83,4 +83,8 @@ shell polkit scrim-alpha 0.70
 shell image-picker scrim-alpha 0.70
 shell spacing scale 0.95
 
+# --- Terminal (Task 4) ---
+file_has "$state/ghostty.conf" "cursor-color = #d8463f"
+file_has "$state/ghostty.conf" "cursor-text = #0c0f11"
+
 exit $fail

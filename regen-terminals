@@ -1,0 +1,33 @@
+#!/bin/bash
+# Regenerate the theme's terminal color files from colors.toml.
+#
+# Omarchy always derives the terminal cursor from bright_foreground, and
+# fsociety wants it in the accent red, so the theme ships its own
+# ghostty.conf, alacritty.toml, kitty.conf and foot.ini. Shipping a file stops
+# Omarchy generating it, so run this after every colors.toml edit.
+set -euo pipefail
+
+theme_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+
+# omarchy-theme-set-templates writes to a fixed path under $HOME. A throwaway
+# HOME points it somewhere safe and also leaves out any user templates.
+scratch=$(mktemp -d)
+trap 'rm -rf "$scratch"' EXIT
+out="$scratch/.local/state/omarchy/current/next-theme"
+mkdir -p "$out"
+cp "$theme_dir/colors.toml" "$out/"
+HOME="$scratch" omarchy-theme-set-templates
+
+colors=$(omarchy-theme-color --file "$theme_dir/colors.toml" --all)
+value() { awk -F'\t' -v k="$1" '$1 == k { print $2 }' <<<"$colors"; }
+accent=$(value accent)
+background=$(value background)
+
+sed "s|^cursor-color = .*|cursor-color = $accent\ncursor-text = $background|" \
+  "$out/ghostty.conf" >"$theme_dir/ghostty.conf"
+sed "s|^cursor = \".*\"|cursor = \"$accent\"|" \
+  "$out/alacritty.toml" >"$theme_dir/alacritty.toml"
+sed "s|^cursor #.*|cursor $accent|" \
+  "$out/kitty.conf" >"$theme_dir/kitty.conf"
+sed "s|^cursor=.*|cursor=${background#\#} ${accent#\#}|" \
+  "$out/foot.ini" >"$theme_dir/foot.ini"
