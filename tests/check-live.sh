@@ -87,4 +87,21 @@ shell spacing scale 0.95
 file_has "$state/ghostty.conf" "cursor-color = #d8463f"
 file_has "$state/ghostty.conf" "cursor-text = #0c0f11"
 
+# --- Lock, btop, art ---
+shell lock background '"#050607"'
+shell lock background-alpha 0.88
+shell lock border-active '"rgba(d8463fff) rgba(8c2f2bff) 45deg"'
+shell lock border-error '"#d8463f"'
+file_has "$state/btop.theme" 'theme[temp_end]="#d8463f"'
+file_has "$state/btop.theme" 'theme[cpu_end]="#e2e9eb"'
+file_has "$state/chromium.theme" "5,6,7"
+file_has "$state/keyboard.rgb" "#3a4448"
+for bg in 6-brackets 7-readout 8-hatch; do
+  for tag in 4k qhd; do
+    [[ -s $state/backgrounds/$bg-$tag.jpg ]] && pass "background $bg-$tag" || flop "background $bg-$tag missing"
+  done
+done
+dims=$(identify -format '%wx%h' "$state/unlock.png" 2>/dev/null)
+[[ $dims == 640x530 ]] && pass "unlock.png 640x530" || flop "unlock.png: wanted 640x530, got '$dims'"
+
 exit $fail
