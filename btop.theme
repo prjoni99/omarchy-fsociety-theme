@@ -1,0 +1,69 @@
+# fsociety btop. Dark neutral base; the greys carry normal load and the red
+# appears only where btop means trouble: the hot end of temperature, the
+# "available" meter running out, and the selected (kill-able) process.
+
+theme[main_bg]="#0c0f11"
+theme[main_fg]="#c3cbce"
+theme[title]="#afb9bd"
+theme[hi_fg]="#e2e9eb"
+theme[selected_bg]="#2a1a1a"
+theme[selected_fg]="#d8463f"
+theme[inactive_fg]="#3a4448"
+theme[graph_text]="#afb9bd"
+theme[meter_bg]="#161a1d"
+theme[proc_misc]="#afb9bd"
+
+# Box outlines stay neutral; the net box is the one live feed, a shade lighter.
+theme[cpu_box]="#3a4448"
+theme[mem_box]="#3a4448"
+theme[net_box]="#5c686c"
+theme[proc_box]="#3a4448"
+theme[div_line]="#161a1d"
+
+# Temperature: grey until it matters.
+theme[temp_start]="#5c686c"
+theme[temp_mid]="#afb9bd"
+theme[temp_end]="#d8463f"
+
+# CPU load: dark to bright grey, no colour.
+theme[cpu_start]="#3a4448"
+theme[cpu_mid]="#7f8b8f"
+theme[cpu_end]="#e2e9eb"
+
+theme[free_start]="#3a4448"
+theme[free_mid]="#5c686c"
+theme[free_end]="#afb9bd"
+
+theme[cached_start]="#3a4448"
+theme[cached_mid]="#5c686c"
+theme[cached_end]="#afb9bd"
+
+# Available memory: the only meter that reddens as it shrinks.
+theme[available_start]="#afb9bd"
+theme[available_mid]="#7f8b8f"
+theme[available_end]="#d8463f"
+
+theme[used_start]="#3a4448"
+theme[used_mid]="#7f8b8f"
+theme[used_end]="#e2e9eb"
+
+theme[download_start]="#3a4448"
+theme[download_mid]="#7f8b8f"
+theme[download_end]="#e2e9eb"
+
+theme[upload_start]="#3a4448"
+theme[upload_mid]="#7f8b8f"
+theme[upload_end]="#afb9bd"
+
+theme[process_start]="#3a4448"
+theme[process_mid]="#7f8b8f"
+theme[process_end]="#e2e9eb"
+
+theme[gradient_color_0]="#0c0f11"
+theme[gradient_color_1]="#161a1d"
+theme[gradient_color_2]="#2a1a1a"
+theme[gradient_color_3]="#3a4448"
+theme[gradient_color_4]="#5c686c"
+theme[gradient_color_5]="#c3cbce"
+theme[gradient_color_6]="#afb9bd"
+theme[gradient_color_7]="#e2e9eb"
