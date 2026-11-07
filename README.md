@@ -67,3 +67,8 @@ creators. No show assets are redistributed here.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+Made by Jon Vargas at [CasaVargas](https://casavargas.app), a small studio making apps
+for the Mac, iPhone, Windows and Linux.
